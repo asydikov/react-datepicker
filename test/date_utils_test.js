@@ -2,6 +2,7 @@ import {
   newDate,
   addHours,
   addDays,
+  addQuarters,
   subDays,
   isEqual,
   isSameDay,
@@ -490,7 +491,7 @@ describe("date_utils", function () {
 
     it("should be disabled if not in included dates", () => {
       const day = newDate();
-      const includeDates = [addDays(day, 40)];
+      const includeDates = [addQuarters(day, 1)];
       expect(isQuarterDisabled(day, { includeDates })).to.be.true;
     });
 
